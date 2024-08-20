@@ -14,67 +14,118 @@
             margin: 0; /* Remove default margin */
             padding: 0; /* Remove default padding */
             overflow-x: hidden; /* Prevent horizontal overflow */
+            background-color: #F9F9F9;
         }
         .masthead {
-            background: linear-gradient(180deg, #FDD1E2 0%, #FFFFFF 100%);
+            background: linear-gradient(180deg, #FEC0C0 0%, #FFFFFF 100%);
             padding: 4rem 0;
             text-align: center;
             color: #FF6F91;
             position: relative;
-            margin-top: 0; /* Remove top margin */
-            height: 100vh; /* Ensure it covers full viewport height */
-            width: 100%; /* Ensure it spans the full width */
+            height: 100vh;
+            width: 100%;
         }
         .masthead h1 {
-            font-family: 'Comic Neue', sans-serif;
-            font-size: 3rem;
+            font-family: 'Cookie', cursive;
+            font-size: 4rem;
             font-weight: bold;
             color: #FF6F91;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            margin-bottom: 1.5rem;
+        }
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid #FF6F91;
+            display: block;
+            margin: 2rem auto;
+            cursor: pointer;
+        }
+        .arrow-down:hover {
+            border-top-color: #FF4C6D;
         }
         .donation-section {
             padding: 5rem 0;
-            background-color: #F9F9F9;
         }
         .donation-card {
             border: 1px solid #F1F1F1;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            background-color: #FFF;
+            overflow: hidden;
+            transition: transform 0.3s ease;
             margin-bottom: 2rem;
         }
         .donation-card:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
         }
         .donation-card img {
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
+            border-bottom: 1px solid #F1F1F1;
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
         .donation-card-body {
-            padding: 1rem;
+            padding: 1.5rem;
+            text-align: center;
         }
         .donation-title {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-weight: bold;
             color: #FF6F91;
+            margin-bottom: 0.5rem;
         }
         .donation-description {
             font-size: 1rem;
-            color: #333;
+            color: #555;
+            margin-bottom: 1rem;
         }
         .btn-donate {
             background-color: #FF6F91;
             color: white;
             border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
         .btn-donate:hover {
             background-color: #FF4C6D;
+            transform: scale(1.05);
+        }
+        .impact-section {
+            background-color: #FF6F91;
+            color: white;
+            padding: 4rem 0;
+        }
+        .impact-card {
+            background-color: #FFF;
+            color: #333;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        .impact-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #F1F1F1;
+        }
+        .impact-card-body {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .impact-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #FF6F91;
+            margin-bottom: 1rem;
+        }
+        .impact-description {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1rem;
         }
         .footer {
             background-color: #FF6F91;
@@ -82,24 +133,11 @@
             padding: 2rem 0;
             text-align: center;
         }
-        .arrow-down {
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 10px solid #FF4C6D;
-            display: block;
-            margin: 2rem auto;
-            cursor: pointer; /* Indicate that it's clickable */
-        }
-        .arrow-down:hover {
-            color: #FF4C6D;
-        }
     </style>
 </head>
 <body>
     <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3">
         <div class="container">
             <a class="navbar-brand" href="index.html">MEOWFE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -120,20 +158,26 @@
 
     <!-- Main content -->
     <header class="masthead">
-        <h1 class="text-uppercase"><strong>Donate to MEOWFE</strong></h1>
-        <a href="#donation-section" class="arrow-down"></a> <!-- Make the arrow clickable and scroll to the donation section -->
+        <h1 class="text-uppercase"><strong>Support Our Cats</strong></h1>
+        <a href="#donation-section" class="arrow-down"></a>
     </header>
 
     <section id="donation-section" class="donation-section">
         <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2 class="display-3">Your Generosity Makes a Difference</h2>
+                    <p class="lead">Every donation helps us provide a better life for our cats. Explore the different ways you can contribute to their well-being.</p>
+                </div>
+            </div>
             <div class="row">
                 <!-- Donation Option 1 -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="donation-card">
                         <img src="images/donation-1.jpg" alt="Donation Option 1">
                         <div class="donation-card-body">
-                            <h4 class="donation-title">Basic Support</h4>
-                            <p class="donation-description">Help us with basic supplies and necessities for our cats. Your donation will cover their food and litter.</p>
+                            <h4 class="donation-title">Basic Needs</h4>
+                            <p class="donation-description">Support our daily essentials including food, litter, and other supplies to keep our cats healthy and happy.</p>
                             <a href="https://donate.example.com/basic" class="btn btn-donate">Donate Now</a>
                         </div>
                     </div>
@@ -143,8 +187,8 @@
                     <div class="donation-card">
                         <img src="images/donation-2.jpg" alt="Donation Option 2">
                         <div class="donation-card-body">
-                            <h4 class="donation-title">Medical Care</h4>
-                            <p class="donation-description">Contribute to our medical fund for vaccinations, check-ups, and any urgent treatments needed for our cats.</p>
+                            <h4 class="donation-title">Health Care</h4>
+                            <p class="donation-description">Help cover the costs for veterinary care, vaccinations, and emergency treatments for our beloved cats.</p>
                             <a href="https://donate.example.com/medical" class="btn btn-donate">Donate Now</a>
                         </div>
                     </div>
@@ -155,11 +199,58 @@
                         <img src="images/donation-3.jpg" alt="Donation Option 3">
                         <div class="donation-card-body">
                             <h4 class="donation-title">Special Projects</h4>
-                            <p class="donation-description">Support our special projects like building new play areas or providing enrichment for our cats.</p>
+                            <p class="donation-description">Support exciting projects such as building new play areas or creating enrichment activities for our cats.</p>
                             <a href="https://donate.example.com/projects" class="btn btn-donate">Donate Now</a>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Cats Section -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2 class="display-3">Meet Our Cats</h2>
+                    <p class="lead">Discover the adorable cats whose lives have been touched by your generosity. Click below to see more!</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Cat 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <img src="images/cat-1.jpg" alt="Cat 1">
+                        <div class="impact-card-body">
+                            <h4 class="impact-title">Mittens</h4>
+                            <p class="impact-description">Mittens is a playful kitten who loves to chase laser pointers and snuggle in cozy blankets.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cat 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <img src="images/cat-2.jpg" alt="Cat 2">
+                        <div class="impact-card-body">
+                            <h4 class="impact-title">Whiskers</h4>
+                            <p class="impact-description">Whiskers is a senior cat who enjoys lounging in sunny spots and receiving gentle pets.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cat 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="impact-card">
+                        <img src="images/cat-3.jpg" alt="Cat 3">
+                        <div class="impact-card-body">
+                            <h4 class="impact-title">Paws</h4>
+                            <p class="impact-description">Paws is a curious explorer who loves discovering new toys and interacting with visitors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="catboard.html" class="btn btn-donate">Meet More Cats</a>
             </div>
         </div>
     </section>
