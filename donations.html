@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEOWFE - Donations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+        .masthead {
+            background: linear-gradient(180deg, #FDD1E2 0%, #FFFFFF 100%);
+            padding: 4rem 0;
+            text-align: center;
+            color: #FF6F91;
+        }
+        .masthead h1 {
+            font-family: 'Comic Neue', sans-serif;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #FF6F91;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .donation-section {
+            padding: 5rem 0;
+            background-color: #F9F9F9;
+        }
+        .donation-card {
+            border: 1px solid #F1F1F1;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        .donation-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .donation-card img {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .donation-card-body {
+            padding: 1rem;
+        }
+        .donation-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #FF6F91;
+        }
+        .donation-description {
+            font-size: 1rem;
+            color: #333;
+        }
+        .btn-donate {
+            background-color: #FF6F91;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        .btn-donate:hover {
+            background-color: #FF4C6D;
+        }
+        .footer {
+            background-color: #FF6F91;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">MEOWFE</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Our Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="packages.html">Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cat-board.html">Cat Board</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="donations.html">Donations</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <header class="masthead">
+        <h1 class="text-uppercase"><strong>Donate to MEOWFE</strong></h1>
+    </header>
+
+    <section class="donation-section">
+        <div class="container">
+            <div class="row">
+                <!-- Donation Option 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="donation-card">
+                        <img src="images/donation-1.jpg" alt="Donation Option 1">
+                        <div class="donation-card-body">
+                            <h4 class="donation-title">Basic Support</h4>
+                            <p class="donation-description">Help us with basic supplies and necessities for our cats. Your donation will cover their food and litter.</p>
+                            <a href="https://donate.example.com/basic" class="btn btn-donate">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Donation Option 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="donation-card">
+                        <img src="images/donation-2.jpg" alt="Donation Option 2">
+                        <div class="donation-card-body">
+                            <h4 class="donation-title">Medical Care</h4>
+                            <p class="donation-description">Contribute to our medical fund for vaccinations, check-ups, and any urgent treatments needed for our cats.</p>
+                            <a href="https://donate.example.com/medical" class="btn btn-donate">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Donation Option 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="donation-card">
+                        <img src="images/donation-3.jpg" alt="Donation Option 3">
+                        <div class="donation-card-body">
+                            <h4 class="donation-title">Special Projects</h4>
+                            <p class="donation-description">Support our special projects like building new play areas or providing enrichment for our cats.</p>
+                            <a href="https://donate.example.com/projects" class="btn btn-donate">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="mb-0">&copy; 2024 MEOWFE Cat Café | All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

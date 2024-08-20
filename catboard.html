@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEOWFE - Cat Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+        .masthead {
+            background: linear-gradient(180deg, #FDD1E2 0%, #FFFFFF 100%);
+            padding: 4rem 0;
+            text-align: center;
+            color: #FF6F91;
+            position: relative;
+        }
+        .masthead h1 {
+            font-family: 'Comic Neue', sans-serif;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #FF6F91;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 1rem;
+        }
+        .masthead p {
+            font-size: 1.25rem;
+            color: #FF6F91;
+            margin: 0 auto;
+            max-width: 800px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        .masthead .nav-buttons {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+        .masthead .nav-buttons a {
+            color: #FF6F91;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+        .masthead .nav-buttons a:hover {
+            color: #FF4C6D;
+        }
+        .arrow-down {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            font-size: 2rem;
+            color: #FF6F91;
+        }
+        .arrow-down:hover {
+            color: #FF4C6D;
+        }
+        .cat-section {
+            padding: 5rem 0;
+            background-color: #F9F9F9;
+        }
+        .cat-card {
+            border: 1px solid #F1F1F1;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        .cat-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .cat-card img {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .cat-card-body {
+            padding: 1rem;
+        }
+        .cat-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .btn-adopt {
+            background-color: #FF6F91;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        .btn-adopt:hover {
+            background-color: #FF4C6D;
+        }
+        .footer {
+            background-color: #FF6F91;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="masthead">
+        <div class="nav-buttons">
+            <a href="index.html" class="meowfe-text">MEOWFE</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="cat-board.html">Cat Board</a>
+        </div>
+        <h1 class="text-uppercase"><strong>Cat Board</strong></h1>
+        <p>To adopt a cat, please note that you will be required to come to the cafe at least once and befriend the cat before adopting.
+            If you are interested in adopting a cat, please click on the adopt button under any cat you'd like and make an appointment.
+            Thank you!
+        </p>
+        <div class="arrow-down" onclick="scrollToCatSection()">&#9660;</div>
+    </header>
+
+    <section id="cat-section" class="cat-section">
+        <div class="container">
+            <div class="row">
+                <!-- Cat Card 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="cat-card">
+                        <img src="images/Cat Breed 1.jfif" alt="Cat Breed 1">
+                        <div class="cat-card-body">
+                            <h4 class="cat-name">Whiskers</h4>
+                            <p><strong>Birth Date:</strong> March 12, 2022</p>
+                            <p><strong>Breed:</strong> Siamese</p>
+                            <a href="contact.html" class="btn btn-adopt">Adopt</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cat Card 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="cat-card">
+                        <img src="images/Cat Breed 2.jfif" alt="Cat Breed 2">
+                        <div class="cat-card-body">
+                            <h4 class="cat-name">Shadow</h4>
+                            <p><strong>Birth Date:</strong> June 5, 2021</p>
+                            <p><strong>Breed:</strong> Maine Coon</p>
+                            <a href="contact.html" class="btn btn-adopt">Adopt</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cat Card 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="cat-card">
+                        <img src="images/Cat Breed 3.jfif" alt="Cat Breed 3">
+                        <div class="cat-card-body">
+                            <h4 class="cat-name">Mittens</h4>
+                            <p><strong>Birth Date:</strong> February 22, 2020</p>
+                            <p><strong>Breed:</strong> Persian</p>
+                            <a href="contact.html" class="btn btn-adopt">Adopt</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cat Card 4 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="cat-card">
+                        <img src="images/Cat Breed 4.jfif" alt="Cat Breed 4">
+                        <div class="cat-card-body">
+                            <h4 class="cat-name">Luna</h4>
+                            <p><strong>Birth Date:</strong> November 30, 2022</p>
+                            <p><strong>Breed:</strong> Ragdoll</p>
+                            <a href="contact.html" class="btn btn-adopt">Adopt</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cat Card 5 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="cat-card">
+                        <img src="images/Cat Breed 5.jpg" alt="Cat Breed 5">
+                        <div class="cat-card-body">
+                            <h4 class="cat-name">Oliver</h4>
+                            <p><strong>Birth Date:</strong> July 8, 2021</p>
+                            <p><strong>Breed:</strong> British Shorthair</p>
+                            <a href="contact.html" class="btn btn-adopt">Adopt</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cat Card 6 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="cat-card">
+                        <img src="images/Cat Breed 6.png" alt="Cat Breed 6">
+                        <div class="cat-card-body">
+                            <h4 class="cat-name">Simba</h4>
+                            <p><strong>Birth Date:</strong> September 17, 2019</p>
+                            <p><strong>Breed:</strong> Bengal</p>
+                            <a href="contact.html" class="btn btn-adopt">Adopt</a>
+                        </div>
+                    </
