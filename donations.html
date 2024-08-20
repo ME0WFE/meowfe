@@ -82,10 +82,23 @@
             padding: 2rem 0;
             text-align: center;
         }
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #FF4C6D;
+            display: block;
+            margin: 2rem auto;
+            cursor: pointer; /* Indicate that it's clickable */
+        }
+        .arrow-down:hover {
+            color: #FF4C6D;
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation bar from header.html -->
+    <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="index.html">MEOWFE</a>
@@ -108,9 +121,10 @@
     <!-- Main content -->
     <header class="masthead">
         <h1 class="text-uppercase"><strong>Donate to MEOWFE</strong></h1>
+        <a href="#donation-section" class="arrow-down"></a> <!-- Make the arrow clickable and scroll to the donation section -->
     </header>
 
-    <section class="donation-section">
+    <section id="donation-section" class="donation-section">
         <div class="container">
             <div class="row">
                 <!-- Donation Option 1 -->
