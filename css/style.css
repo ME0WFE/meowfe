@@ -1,7 +1,12 @@
+/* General Styles */
 body {
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Masthead */
 .masthead {
     position: relative;
     background: url('https://www.example.com/cat-cafe-bg.jpg') no-repeat center center;
@@ -11,6 +16,9 @@ body {
     color: #fff;
     text-align: center;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .masthead::before {
@@ -20,52 +28,43 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 105, 180, 0.5) 100%); /* Soft pink gradient */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 105, 180, 0.5) 100%);
     z-index: 1;
 }
 
 .masthead .container {
     position: relative;
     z-index: 2;
+    padding: 0 2rem;
+    max-width: 1200px;
 }
 
 .masthead h1 {
     font-family: 'Cookie', cursive;
     font-size: 4rem;
     color: #FF6F91;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Adding text shadow for better contrast */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    margin: 0;
+    padding: 0;
 }
 
-.masthead .divider, .page-section .divider {
-    width: 75%;
-    height: 0.25rem;
-    background-color: #FF9AA2;
-    margin: 1.5rem auto;
-}
-
-.page-section {
-    padding: 4rem 0;
-    position: relative;
-    background: linear-gradient(180deg, #FFFFFF 0%, #FFDEE2 100%); /* Light white and soft pink background */
-}
-
-.page-section h2 {
-    font-family: 'Cookie', cursive;
-    font-size: 2.5rem;
-    color: #FF6F91;
-}
-
-footer {
-    background-color: #FF6F91;
-}
-
-footer p {
+.masthead p {
+    font-size: 1.25rem;
     color: #FFFFFF;
+    max-width: 800px;
+    margin: 1rem auto;
+    line-height: 1.5;
 }
 
 .btn-primary, .btn-dark {
     background-color: #FF6F91;
     border-color: #FF6F91;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-primary:hover, .btn-dark:hover {
@@ -73,10 +72,79 @@ footer p {
     border-color: #FF9AA2;
 }
 
+.masthead .btn-primary, .masthead .btn-dark {
+    margin-top: 1.5rem;
+}
+
+/* Page Section */
+.page-section {
+    padding: 4rem 1rem;
+    position: relative;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFDEE2 100%);
+    border-top: 2px solid #FF6F91;
+}
+
+.page-section h2 {
+    font-family: 'Cookie', cursive;
+    font-size: 2.5rem;
+    color: #FF6F91;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.page-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #FF9AA2;
+    margin-top: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.page-section .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.page-section .card {
+    background-color: #FFFFFF;
+    border: 1px solid #FF9AA2;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.page-section .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background-color: #FF6F91;
+    padding: 2rem 1rem;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Navbar */
 .navbar-brand {
     font-family: 'Cookie', cursive;
     color: #FF6F91;
     font-size: 1.75rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -84,6 +152,7 @@ footer p {
     font-weight: bold;
     position: relative;
     padding-bottom: 10px;
+    transition: color 0.3s ease;
 }
 
 .navbar-light .navbar-nav .nav-link::after {
@@ -99,14 +168,21 @@ footer p {
     transition: transform 0.3s ease;
 }
 
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #FF9AA2;
+}
+
 .navbar-light .navbar-nav .nav-link:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
+/* Logo Image */
 .logo-img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
